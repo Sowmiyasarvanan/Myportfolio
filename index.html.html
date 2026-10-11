@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Sowmiya S. — Flutter Developer and Mobile Application Developer portfolio.">
+  <title>Sowmiya S. | Flutter Developer</title>
+  <style>
+    :root{--bg:#0b1020;--surface:#121a2d;--surface-blue:#1b2540;--text:#eef2ff;--muted:#b0bbd1;--blue:#9b8cff;--blue2:#b3a7ff;--cyan:#c0b5ff;--line:#2a3550;--shadow:0 18px 55px rgba(0,0,0,.30);--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;font-family:Calibri,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}a{color:inherit;text-decoration:none}button,a{-webkit-tap-highlight-color:transparent}.wrap{width:min(var(--max),calc(100% - 42px));margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(220,230,244,.9)}nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{font-weight:900;font-size:1.2rem;letter-spacing:.04em}.brand span{color:var(--blue)}.navlinks{display:flex;align-items:center;gap:25px;color:var(--muted);font-size:.98rem}.navlinks a{transition:color .2s}.navlinks a:hover{color:var(--blue)}.menu-toggle{display:none;background:white;border:1px solid var(--line);border-radius:10px;padding:8px 12px;color:var(--text);font-size:1.1rem}
+    .hero{position:relative;padding:95px 0 88px;isolation:isolate;background:linear-gradient(135deg,#0b1630 0%,#102b55 58%,#123b64 100%);color:#f7fbff;overflow:hidden}.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;z-index:-1;filter:blur(2px);pointer-events:none}.hero:before{width:430px;height:430px;right:-120px;top:-100px;background:radial-gradient(circle,rgba(76,141,255,.30),rgba(76,141,255,0) 70%);animation:float 8s ease-in-out infinite}.hero:after{width:280px;height:280px;left:-130px;bottom:-130px;background:radial-gradient(circle,rgba(25,184,207,.20),transparent 70%);animation:float 10s ease-in-out infinite reverse}.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:55px}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--blue);text-transform:uppercase;letter-spacing:.14em;font-size:.82rem;font-weight:800}.eyebrow:before{content:"";height:2px;width:25px;background:var(--cyan)}h1{font-size:clamp(2.8rem,6vw,5.1rem);line-height:1.04;letter-spacing:-.045em;margin:19px 0 22px;max-width:760px}h1 .gradient{background:linear-gradient(100deg,var(--blue),#3896e8 65%,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}.hero .eyebrow{color:#75e4ef}.hero h1{color:#f7fbff}.hero .lead{font-size:1.17rem;color:#c6d5eb;max-width:680px;margin:0}.hero .hero-meta{color:#c6d5eb}.hero .btn:not(.primary){color:#f7fbff;border-color:#526a8d;background:rgba(255,255,255,.04)}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:29px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid var(--line);border-radius:12px;padding:12px 18px;font-weight:800;transition:transform .22s,box-shadow .22s,background .22s}.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(23,105,224,.13)}.btn.primary{background:var(--blue);border-color:var(--blue);color:white;box-shadow:0 9px 22px rgba(23,105,224,.2)}.btn.primary:hover{background:#0f57c3}.hero-meta{display:flex;flex-wrap:wrap;gap:18px;margin-top:28px;color:var(--muted);font-size:.94rem}.hero-meta span{display:flex;align-items:center;gap:7px}.hero-meta b{color:var(--blue)}
+    
+    .tech-visual{position:relative;justify-self:center;width:min(100%,360px);height:360px;display:grid;place-items:center;isolation:isolate}.orbit{position:absolute;border:1px solid rgba(119,210,255,.35);border-radius:50%;inset:8%;animation:spin 22s linear infinite}.orbit-two{inset:18%;border-style:dashed;animation-direction:reverse;animation-duration:28s}.tech-core{width:190px;height:190px;border-radius:34px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:linear-gradient(145deg,rgba(255,255,255,.17),rgba(255,255,255,.06));border:1px solid rgba(180,220,255,.42);box-shadow:0 25px 70px rgba(0,0,0,.22),inset 0 0 30px rgba(100,190,255,.10);backdrop-filter:blur(10px);animation:float 6s ease-in-out infinite}.bracket{font-size:2.5rem;font-weight:900;color:#7be6ef}.tech-core strong{font-size:1.35rem;color:#fff}.tech-core small{font-size:.72rem;color:#c6d5eb}.tech-bubble{position:absolute;padding:10px 14px;border-radius:12px;background:#fff;color:#173c70;font-weight:800;font-size:.85rem;box-shadow:0 12px 30px rgba(0,0,0,.18);animation:float 5s ease-in-out infinite}.bubble-one{top:14%;right:0}.bubble-two{bottom:17%;left:0;animation-delay:-1.5s}.bubble-three{bottom:5%;right:9%;animation-delay:-3s}@keyframes spin{to{transform:rotate(360deg)}}
+    section{padding:82px 0;border-top:1px solid #e7eef8}.sectionhead{margin-bottom:30px}.sectionhead h2{font-size:clamp(2rem,4vw,3rem);line-height:1.12;letter-spacing:-.035em;margin:10px 0}.sectionhead p{color:var(--muted);margin:0;max-width:720px}.aboutgrid,.projectgrid,.skillgrid{display:grid;gap:19px}.aboutgrid{grid-template-columns:1.15fr .85fr}.projectgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.skillgrid{grid-template-columns:repeat(3,minmax(0,1fr))}.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:25px;box-shadow:0 6px 24px rgba(24,67,125,.035);transition:transform .25s,box-shadow .25s,border-color .25s}.card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#bfd5f6}.card h3{margin:0 0 10px;font-size:1.25rem}.card p{color:var(--muted);margin:0 0 13px}.card p:last-child{margin-bottom:0}.soft-card{background:linear-gradient(135deg,#fff,#f1f7ff)}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.chip{background:var(--surface-blue);border:1px solid #d9e8fc;color:#25518c;padding:5px 10px;border-radius:999px;font-size:.87rem}.mini-icon{display:grid;place-items:center;width:47px;height:47px;border-radius:14px;background:#eaf2ff;color:var(--blue);font-size:1.35rem;margin-bottom:15px}.projecttop{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.projecticon{display:grid;place-items:center;width:48px;height:48px;border-radius:15px;background:linear-gradient(135deg,#e9f1ff,#e5fbff);color:var(--blue);font-size:1.45rem}.tag{color:var(--blue);font-size:.76rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}.project-points{padding-left:20px;margin:12px 0 0;color:var(--muted)}.project-points li{margin:5px 0}.timeline{display:grid;gap:22px}.timelineitem{border-left:3px solid #a8c9fb;padding:2px 0 4px 22px;position:relative}.timelineitem:before{content:"";position:absolute;width:11px;height:11px;background:var(--blue);border:3px solid #e5efff;border-radius:50%;left:-8px;top:6px}.timelineitem h3{margin:0}.meta{color:var(--blue);font-size:.94rem;font-weight:700;margin:4px 0 10px}.timelineitem p,.timelineitem li{color:var(--muted)}ul{padding-left:20px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}.stat{background:var(--surface-blue);border-radius:14px;padding:16px}.stat strong{display:block;color:var(--blue);font-size:1.65rem;line-height:1.2}.stat span{font-size:.87rem;color:var(--muted)}.contactbox{display:flex;justify-content:space-between;align-items:center;gap:28px;background:linear-gradient(120deg,#fff,#edf5ff);padding:34px}.contactlinks{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.contactlink{display:inline-flex;align-items:center;gap:10px;padding:11px 14px;background:#fff;border:1px solid var(--line);border-radius:12px;color:#23446f;transition:.2s}.contactlink:hover{border-color:#9bbef2;transform:translateY(-2px)}.contactlink .icon{color:var(--blue);font-weight:900}.note{color:#64748b;font-size:.9rem}footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.9rem;background:#fff}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.backtop{color:var(--blue);font-weight:800}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}.delay-1{transition-delay:.1s}.delay-2{transition-delay:.2s}.delay-3{transition-delay:.3s}.typing-caret{display:inline-block;width:3px;height:.9em;background:var(--cyan);margin-left:5px;vertical-align:-.04em;animation:blink 1s steps(2,start) infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}@keyframes halo{0%,100%{transform:rotate(5deg) scale(1)}50%{transform:rotate(1deg) scale(1.025)}}@keyframes blink{to{visibility:hidden}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+    @media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:38px}.hero-copy{order:1}.tech-visual{order:0;width:min(100%,360px);height:340px}.hero{padding:65px 0}.aboutgrid,.skillgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.floating-chip.one{right:-8%}.floating-chip.two{left:-8%}}
+    @media(max-width:620px){.wrap{width:min(var(--max),calc(100% - 30px))}nav{min-height:66px}.menu-toggle{display:block}.navlinks{display:none;position:absolute;top:66px;left:0;right:0;padding:15px 20px 20px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 15px 25px rgba(24,67,125,.08);flex-direction:column;align-items:flex-start;gap:13px}.navlinks.open{display:flex}.hero{padding:48px 0 60px}h1{font-size:clamp(2.55rem,12vw,3.8rem)}.lead{font-size:1.06rem}.tech-visual{width:min(100%,300px);height:300px}section{padding:60px 0}.aboutgrid,.projectgrid,.skillgrid{grid-template-columns:1fr}.card{padding:21px}.contactbox{padding:24px;align-items:flex-start}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:1.4rem}.hero-meta{gap:10px}.btn{padding:11px 14px}}
+
+    /* Dark navy + purple theme */
+    header{background:rgba(11,16,32,.90);border-bottom-color:rgba(155,140,255,.18)}
+    .brand span{color:#9b8cff}.navlinks a:hover,.backtop{color:#b3a7ff}
+    .menu-toggle{background:#121a2d;border-color:#2a3550;color:#eef2ff}
+    .hero{background:linear-gradient(135deg,#090e1c 0%,#111a35 55%,#28204c 100%)}
+    .hero:before{background:radial-gradient(circle,rgba(155,140,255,.30),rgba(155,140,255,0) 70%)}
+    .hero:after{background:radial-gradient(circle,rgba(108,91,220,.22),transparent 70%)}
+    .eyebrow{color:#b3a7ff}.eyebrow:before{background:#9b8cff}
+    h1 .gradient{background:linear-gradient(100deg,#a99cff,#d0a9ff 65%,#8aabff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero .eyebrow{color:#c9c0ff}.bracket{color:#c5baff}
+    .btn.primary{background:linear-gradient(110deg,#7059db,#9278ff);border-color:#9278ff;box-shadow:0 9px 25px rgba(112,89,219,.25)}
+    .btn.primary:hover{background:#7c65e8}.btn:hover{box-shadow:0 10px 25px rgba(112,89,219,.2)}
+    section,section[id="skills"],section[id="experience"]{background:#0e1527!important;border-top-color:#222c45!important}
+    .card{background:linear-gradient(145deg,#141d32,#11182a);border-color:#2a3550;box-shadow:0 8px 26px rgba(0,0,0,.16)}
+    .card:hover{border-color:#7162bb;box-shadow:0 18px 50px rgba(0,0,0,.28)}
+    .soft-card,.contactbox{background:linear-gradient(125deg,#151e34,#1b2040)}
+    .chip{background:#211d3d;border-color:#39315f;color:#d8d0ff}
+    .mini-icon,.projecticon{background:linear-gradient(135deg,#29234a,#202b4a);color:#b6a8ff}
+    .tag,.meta,.stat strong,.contactlink .icon{color:#b3a7ff}
+    .timelineitem{border-left-color:#7665ce}.timelineitem:before{background:#9b8cff;border-color:#302853}
+    .stat{background:#1b2540}.contactbox{border-color:#34365b}
+    .contactlink{background:#111a2d;border-color:#303b56;color:#e4e9f7}.contactlink:hover{border-color:#8272dc}
+    .note{color:#a9b4ca}footer{background:#090e1b;border-top-color:#27314a;color:#a9b4ca}
+    .navlinks{color:#b0bbd1}.navlinks.open{background:#111a2d;border-bottom-color:#2a3550}
+    @media(max-width:620px){.navlinks{background:#111a2d;border-bottom-color:#2a3550;box-shadow:0 15px 25px rgba(0,0,0,.25)}}
+  </style>
+</head>
+<body>
+<header>
+  <nav class="wrap" aria-label="Main navigation">
+    <a class="brand" href="#home" aria-label="Sowmiya S home">Sowmiya S</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+    <div class="navlinks" id="navLinks">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="hero" id="home" style="border-top:0">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Flutter Developer · Mobile Application Developer</div>
+        <h1>Building thoughtful<br><span class="gradient" id="changingTitle">mobile experiences.</span><span class="typing-caret" aria-hidden="true"></span></h1>
+        <p class="lead">Hello, I’m <strong>Sowmiya S.</strong> I have 5+ years of IT experience, including 3+ years focused on Flutter and mobile application development. I build responsive, maintainable applications using Flutter, Dart, BLoC/Cubit, and Clean Architecture.</p>
+        <div class="actions"><a class="btn primary" href="#projects">Explore my projects <span aria-hidden="true">↘</span></a><a class="btn" href="#contact">Let’s connect <span aria-hidden="true">→</span></a></div>
+        <div class="hero-meta"><span><b>✓</b> Flutter & Dart</span><span><b>✓</b> Clean Architecture</span><span><b>✓</b> API Integration</span></div>
+      </div>
+      <div class="tech-visual reveal" aria-label="Abstract mobile development illustration">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="tech-core"><span class="bracket">&lt;/&gt;</span><strong>Flutter</strong><small>Build · Integrate · Deliver</small></div>
+        <div class="tech-bubble bubble-one">Firebase</div><div class="tech-bubble bubble-two">Supabase</div><div class="tech-bubble bubble-three">AI Apps</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="sectionhead reveal"><div class="eyebrow">About me</div><h2>Engineering with clarity<br>and purpose.</h2><p>I enjoy turning product requirements into reliable mobile features with thoughtful UI, clean code, and practical problem-solving.</p></div>
+      <div class="aboutgrid">
+        <div class="card reveal"><div class="mini-icon">✧</div><h3>How I work</h3><p>My experience includes building mobile screens, integrating REST APIs, managing application state, debugging production issues, and supporting app releases. I value reusable components, maintainable architecture, and collaboration across teams.</p><p>I aim to create mobile experiences that are intuitive for users and easier for teams to maintain.</p></div>
+        <div class="card soft-card reveal delay-1"><div class="mini-icon">◎</div><h3>At a glance</h3><p><strong>Role:</strong> Flutter / Mobile Application Developer</p><p><strong>Experience:</strong> 5+ years in IT, including 3+ years in mobile development</p><p><strong>Education:</strong> Master of Computer Applications (MCA)</p><p><strong>Core focus:</strong> Flutter, state management, API integration, app releases</p><div class="stats"><div class="stat"><strong>5+</strong><span>Years in IT</span></div><div class="stat"><strong>3+</strong><span>Years in mobile</span></div><div class="stat"><strong>5+</strong><span>Projects</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" style="background:#fff">
+    <div class="wrap"><div class="sectionhead reveal"><div class="eyebrow">Technical toolkit</div><h2>Skills & technologies</h2><p>A selection of tools and technologies used across my mobile development work.</p></div>
+      <div class="skillgrid">
+        <div class="card reveal"><div class="mini-icon">▣</div><h3>Mobile development</h3><div class="chips"><span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">Android</span><span class="chip">iOS</span><span class="chip">Responsive UI</span></div></div>
+        <div class="card reveal delay-1"><div class="mini-icon">⌘</div><h3>Architecture & state</h3><div class="chips"><span class="chip">BLoC</span><span class="chip">Cubit</span><span class="chip">Clean Architecture</span><span class="chip">Reusable widgets</span></div></div>
+        <div class="card reveal delay-2"><div class="mini-icon">⇄</div><h3>API & services</h3><div class="chips"><span class="chip">REST APIs</span><span class="chip">WebSocket</span><span class="chip">Firebase</span><span class="chip">FCM</span><span class="chip">OneSignal</span><span class="chip">Firebase</span><span class="chip">Supabase</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span></div></div>
+        <div class="card reveal"><div class="mini-icon">◉</div><h3>AI & device features</h3><div class="chips"><span class="chip">Google ML Kit</span><span class="chip">TensorFlow Lite</span><span class="chip">OpenCV</span><span class="chip">Geolocation</span></div></div>
+        <div class="card reveal delay-1"><div class="mini-icon">◇</div><h3>Product integrations</h3><div class="chips"><span class="chip">Push notifications</span><span class="chip">Deep linking</span><span class="chip">Payment flows</span><span class="chip">Google Maps API</span></div></div>
+        <div class="card reveal"><div class="mini-icon">☁</div><h3>Backend & data</h3><div class="chips"><span class="chip">Firebase Auth</span><span class="chip">Cloud Firestore</span><span class="chip">Supabase</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">SQLAlchemy</span></div></div>
+        <div class="card reveal delay-2"><div class="mini-icon">⚙</div><h3>Tools & delivery</h3><div class="chips"><span class="chip">Git</span><span class="chip">Debugging</span><span class="chip">Play Console</span><span class="chip">App Store releases</span><span class="chip">CI/CD scripts</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap"><div class="sectionhead reveal"><div class="eyebrow">Selected work</div><h2>Featured projects</h2><p>A mix of mobile application experience and personal project concepts across finance, AI assistance, attendance, and property management.</p></div>
+      <div class="projectgrid">
+        <article class="card reveal"><div class="projecttop"><div class="projecticon">↗</div><span class="tag">Mobile application</span></div><h3>Wealth Management</h3><p>A financial services mobile app for investment-related journeys and convenient account access.</p><ul class="project-points"><li>Developed Flutter UI for onboarding and account flows.</li><li>Integrated REST APIs and supported payment-related journeys.</li><li>Worked with push notifications and app release activities.</li></ul><div class="chips"><span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">REST APIs</span><span class="chip">Notifications</span></div></article>
+        <article class="card reveal delay-1"><div class="projecttop"><div class="projecticon">◎</div><span class="tag">AI & mobile</span></div><h3>AI Attendance Tracker</h3><p>An attendance and task-management app with face-based workflows and location-aware validation.</p><ul class="project-points"><li>Worked on punch-in/punch-out and attendance status flows.</li><li>Integrated API data and location validation states.</li><li>Built UI handling for incorrect-location reasons.</li></ul><div class="chips"><span class="chip">Flutter</span><span class="chip">BLoC/Cubit</span><span class="chip">ML integration</span><span class="chip">Geolocation</span></div></article>
+        <article class="card reveal"><div class="projecttop"><div class="projecticon">✦</div><span class="tag">AI application</span></div><h3>AI Assistance App</h3><p>An AI-powered assistant concept that helps users ask questions, organize information, and get contextual support through a mobile interface.</p><ul class="project-points"><li>Plan conversational UI and chat history screens.</li><li>Connect mobile features to backend AI APIs.</li><li>Structure the app for maintainable state and reusable components.</li></ul><div class="chips"><span class="chip">Flutter</span><span class="chip">REST APIs</span><span class="chip">FastAPI</span><span class="chip">AI integration</span></div><p class="note">Personal project idea — label as in progress until implemented.</p></article>
+        <article class="card reveal delay-1"><div class="projecttop"><div class="projecticon">⌂</div><span class="tag">Full-stack app</span></div><h3>PG Management App</h3><p>A planned platform for managing PG accommodation, residents, room availability, and day-to-day operations.</p><ul class="project-points"><li>Design resident and property management screens.</li><li>Use authentication and structured data storage.</li><li>Connect Flutter with backend services and database operations.</li></ul><div class="chips"><span class="chip">Flutter</span><span class="chip">Firebase</span><span class="chip">Supabase</span><span class="chip">PostgreSQL</span><span class="chip">FastAPI</span></div><p class="note">Personal project idea — label as in progress until implemented.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" style="background:#fff">
+    <div class="wrap"><div class="sectionhead reveal"><div class="eyebrow">Professional journey</div><h2>Experience & education</h2></div>
+      <div class="card timeline reveal">
+        <div class="timelineitem"><h3>Flutter Developer · Datamoo.ai</h3><div class="meta">August 2023 – Present</div><ul><li>Develop and maintain mobile application features using Flutter and Dart.</li><li>Integrate REST APIs and implement state management with BLoC/Cubit.</li><li>Build reusable UI components, troubleshoot issues, and support application releases.</li></ul></div>
+        <div class="timelineitem"><h3>Previous IT experience</h3><div class="meta">Earlier roles</div><p>Additional IT experience before the current role. For a final public version, this section can be expanded with verified company names, job titles, and dates from your resume.</p></div>
+        <div class="timelineitem"><h3>Master of Computer Applications (MCA)</h3><div class="meta">Education</div><p>Postgraduate qualification in computer applications.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap"><div class="card contactbox reveal"><div><div class="eyebrow">Get in touch</div><h2 style="font-size:clamp(2rem,4vw,2.8rem);line-height:1.15;margin:10px 0">Let’s build something meaningful.</h2><p style="color:var(--muted);margin:0;max-width:580px">I’m interested in opportunities in Flutter and mobile application development. Feel free to contact me.</p></div>
+      <div><div class="contactlinks"><a class="contactlink" href="mailto:s.sowmiya7777@gmail.com"><span class="icon">✉</span>Email me</a><a class="contactlink" href="tel:+919360791254"><span class="icon">☎</span>Call me</a><a class="contactlink" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn homepage; replace with your profile link"><span class="icon">in</span>LinkedIn</a><a class="contactlink" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub homepage; replace with your profile link"><span class="icon">⌘</span>GitHub</a></div><p class="note" style="margin:10px 0 0">LinkedIn and GitHub currently link to their homepages. Replace these with your personal profile URLs when ready.</p></div>
+    </div></div>
+  </section>
+</main>
+<footer><div class="wrap footer-row"><span>© <span id="year"></span> Sowmiya S. · Flutter Developer</span><a class="backtop" href="#home">Back to top ↑</a></div></footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => { const open = navLinks.classList.toggle('open'); menuToggle.setAttribute('aria-expanded', String(open)); menuToggle.textContent = open ? '✕' : '☰'; });
+  navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { navLinks.classList.remove('open'); menuToggle.setAttribute('aria-expanded','false'); menuToggle.textContent = '☰'; }));
+  const revealObserver = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } }); }, {threshold: 0.12});
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  const titles = ['mobile experiences.','reliable applications.','clean Flutter solutions.'];
+  const titleEl = document.getElementById('changingTitle'); let titleIndex = 0;
+  setInterval(() => { titleIndex = (titleIndex + 1) % titles.length; titleEl.animate([{opacity:1,transform:'translateY(0)'},{opacity:0,transform:'translateY(7px)'},{opacity:1,transform:'translateY(0)'}], {duration:500,easing:'ease-in-out'}); titleEl.textContent = titles[titleIndex]; }, 3200);
+</script>
+</body>
+</html>
